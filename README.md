@@ -10,6 +10,8 @@ LICENSE
 COMPILE TOOLS
 ===============
 * VX-REXX
+* IBM C/Set++ 
+* IBM Toolkit v2.1
 
 AUTHORS
 ===============
