@@ -1,0 +1,919 @@
+
+ VROBJEX
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000EAABH CODE32                 CODE 32-bit
+ 0001:0000EAAC 000000030H _MSGSEG32              CODE 32-bit
+ 0002:00000000 000000EB0H DATA32                 DATA 32-bit
+ 0002:00000EB0 000000000H CTOR_DTOR1             DATA 32-bit
+ 0002:00000EB0 000000000H CTOR_DTOR2             DATA 32-bit
+ 0002:00000EB0 000000000H CTOR_DTOR3             DATA 32-bit
+ 0002:00000EB0 000001940H CONST32                CONST 32-bit
+ 0002:000027F0 00000000CH EDC1                   EDC_CLASS 32-bit
+ 0002:000027FC 0000002F4H EDC2                   EDC_CLASS 32-bit
+ 0002:00002AF0 000000004H EDC3                   EDC_CLASS 32-bit
+ 0002:00002AF4 000000000H BSS32                  BSS 32-bit
+ 0002:00002AF4 0000001A0H c_common               BSS 32-bit
+
+ Origin   Group
+ 0002:0   DGROUP
+ 0000:0   FLAT
+
+ Address       Export                  Alias
+
+ 0001:00002A38 SOMInitModule           SOMInitModule
+ 0001:000029E8 SOMUninitModule         SOMUninitModule
+ 0001:00004A98 VRXColorDialog          VRXColorDialog
+ 0001:00004AA0 VRXColourDialog         VRXColourDialog
+ 0001:00004668 VRXDirectoryDialog      VRXDirectoryDialog
+ 0001:00005540 VRXDropFuncs            VRXDropFuncs
+ 0001:00005054 VRXGetClipboardText     VRXGetClipboardText
+ 0001:000056B4 VRXLoadFuncs            VRXLoadFuncs
+ 0001:00005240 VRXPutClipboardText     VRXPutClipboardText
+ 0001:000054EC VRXVersion              VRXVersion
+ 0001:000029B0 _VROBJEX_VERSION_INFO_  _VROBJEX_VERSION_INFO_
+ 0001:00002A90 _VXREXX_CALLER_         _VXREXX_CALLER_
+
+  Address         Publics by Name
+
+ 0002:00002B24       @BSSE:\Development\VXODK\Projects\VRObjEx\C\ICOBTN.C
+ 0002:00002BE4       @BSSE:\Development\VXODK\Projects\VRObjEx\C\TABDLG.C
+ 0002:00002B14       @BSSG:\build\RT\SRC\ATOF.C
+ 0002:00002C40       @BSSG:\build\RT\SRC\ATOLD.C
+ 0002:00002C00       @BSSG:\build\RT\SRC\EDCINIT.C
+ 0002:00002C38       @BSSG:\build\RT\SRC\FREE.C
+ 0002:00002BD4       @BSSG:\build\RT\SRC\GOSCAN.C
+ 0002:00002B98       @BSSG:\build\RT\SRC\N_EXCEPT.C
+ 0002:00002B40       @BSSG:\build\RT\SRC\PRTEMSG.C
+ 0002:00002C3C       @BSSG:\V22\SRC\ODK\LIBC\ANCHOR.C
+ 0002:00002C64       @BSSG:\V22\SRC\ODK\LIBC\CLSDAT1.C
+ 0002:00002C7C       @BSSG:\V22\SRC\ODK\LIBC\CLSDAT2.C
+ 0002:00002AF8       @BSSG:\V22\SRC\ODK\LIBC\CONV1.C
+ 0002:00002C10       @BSSG:\V22\SRC\ODK\LIBC\HELP1.C
+ 0002:00002B2C       @BSSG:\V22\SRC\ODK\LIBC\MAP.C
+ 0002:00002BBC       @BSSG:\V22\SRC\ODK\LIBC\MAPS.C
+ 0002:00002B44       @BSSG:\V22\SRC\ODK\LIBC\MEM1.C
+ 0002:00002B38       @BSSG:\V22\SRC\ODK\LIBC\NOTEBK.C
+ 0002:00002C8C       @BSSG:\V22\SRC\ODK\LIBC\PBUTTON.C
+ 0002:00002C28       @BSSG:\V22\SRC\ODK\LIBC\PICTUTIL.C
+ 0002:00002BA4       @BSSG:\V22\SRC\ODK\LIBC\RUNMODE.C
+ 0002:00002C34       @BSSG:\V22\SRC\ODK\LIBC\VERS.C
+ 0001:0000CD14       atof
+ 0001:0000E51C       calloc
+ 0001:000041C4       ClrDlgProc
+ 0001:00003FFC       DirDlgProc
+ 0002:00002BB4       DLLModule
+ 0001:0000EABE       DOS32GETMESSAGE
+ 0001:0000EABE       Dos32GetMessage
+ 0000:00000000  Imp  DOS32IQUERYMESSAGECP (MSG.8)
+ 0000:00000000  Imp  DOS32TRUEGETMESSAGE  (MSG.6)
+ 0000:00000000  Imp  DosAllocMem          (DOSCALLS.299)
+ 0000:00000000  Imp  DosAllocSharedMem    (DOSCALLS.300)
+ 0000:00000000  Imp  DosCloseEventSem     (DOSCALLS.326)
+ 0000:00000000  Imp  DosCloseMutexSem     (DOSCALLS.333)
+ 0000:00000000  Imp  DosCreateEventSem    (DOSCALLS.324)
+ 0000:00000000  Imp  DosCreateMutexSem    (DOSCALLS.331)
+ 0000:00000000  Imp  DosCreateThread      (DOSCALLS.311)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  DosFreeMem           (DOSCALLS.304)
+ 0000:00000000  Imp  DosGetInfoBlocks     (DOSCALLS.312)
+ 0001:0000EABE       DOSGETMESSAGE
+ 0001:0000EABE       DosGetMessage
+ 0000:00000000  Imp  DOSPOSTEVENTSEM      (DOSCALLS.328)
+ 0000:00000000  Imp  DosQueryDBCSEnv      (NLS.6)
+ 0000:00000000  Imp  DosQueryHType        (DOSCALLS.224)
+ 0000:00000000  Imp  DosQueryModuleHandle (DOSCALLS.319)
+ 0000:00000000  Imp  DosQueryProcAddr     (DOSCALLS.321)
+ 0000:00000000  Imp  DosQuerySysInfo      (DOSCALLS.348)
+ 0000:00000000  Imp  DosRaiseException    (DOSCALLS.356)
+ 0000:00000000  Imp  DosRead              (DOSCALLS.281)
+ 0000:00000000  Imp  DOSRELEASEMUTEXSEM   (DOSCALLS.335)
+ 0000:00000000  Imp  DOSREQUESTMUTEXSEM   (DOSCALLS.334)
+ 0000:00000000  Imp  DOSRESETEVENTSEM     (DOSCALLS.327)
+ 0000:00000000  Imp  DosSetExceptionHandler (DOSCALLS.354)
+ 0000:00000000  Imp  DosSetFilePtr        (DOSCALLS.256)
+ 0000:00000000  Imp  DosSetSignalExceptionFocus (DOSCALLS.378)
+ 0000:00000000  Imp  DosUnsetExceptionHandler (DOSCALLS.355)
+ 0000:00000000  Imp  DosUnwindException   (DOSCALLS.357)
+ 0000:00000000  Imp  DOSWAITEVENTSEM      (DOSCALLS.329)
+ 0000:00000000  Imp  DosWrite             (DOSCALLS.282)
+ 0001:00006F60       fflush
+ 0001:00001A84       FindMnemonic
+ 0001:00008FFC       free
+ 0001:00007264       getenv
+ 0001:0000602C       get_M_VRCoreClassData
+ 0001:00005EF4       get_M_VRManagerClassData
+ 0001:00005F18       get_M_VRPrimitiveClassData
+ 0001:00006008       get_M_VRVisibleClassData
+ 0001:00005FE4       get_M_VRWindowClassData
+ 0001:00006098       get_VRCoreClassData
+ 0001:00005F3C       get_VRManagerClassData
+ 0001:00005F60       get_VRPrimitiveClassData
+ 0001:00006074       get_VRVisibleClassData
+ 0001:00006050       get_VRWindowClassData
+ 0000:00000000  Imp  GpiBox               (PMGPI.356)
+ 0000:00000000  Imp  GpiCreateLogColorTable (PMGPI.592)
+ 0000:00000000  Imp  GpiLine              (PMGPI.398)
+ 0000:00000000  Imp  GpiMove              (PMGPI.404)
+ 0000:00000000  Imp  GpiQueryFontMetrics  (PMGPI.453)
+ 0000:00000000  Imp  GpiQueryRGBColor     (PMGPI.479)
+ 0000:00000000  Imp  GpiQueryTextBox      (PMGPI.489)
+ 0000:00000000  Imp  GpiSetColor          (PMGPI.517)
+ 0001:00001B34       LoadPicture
+ 0001:0000EA48       longjmp
+ 0001:0000B6BC       malloc
+ 0001:0000C26C       mbtowc
+ 0002:0000003C       M_VRIconButtonCClassData
+ 0002:00000038       M_VRIconButtonClassData
+ 0001:00001E9C       M_VRIconButtonNewClass
+ 0001:0000614C       M_VRNotebookNewClass
+ 0001:000060BC       M_VRPushButtonNewClass
+ 0002:000006BC       M_VRTabbedDialogCClassData
+ 0002:000006B4       M_VRTabbedDialogClassData
+ 0001:00003674       M_VRTabbedDialogNewClass
+ 0001:00000D48       PaintButton
+ 0000:00000000  Imp  RexxDeregisterFunction (REXXAPI.19)
+ 0000:00000000  Imp  RexxQueryFunction    (REXXAPI.20)
+ 0000:00000000  Imp  RexxRegisterFunctionDll (REXXAPI.17)
+ 0000:00000000  Imp  RexxVariablePool     (REXX.2)
+ 0001:00004FBC       SaveResultString
+ 0001:00001830       SetAutoSize
+ 0001:0000EA0C       setjmp
+ 0001:0000EAAC       sig32
+ 0000:00000000  Imp  SOMClassClassData    (som.3)
+ 0000:00000000  Imp  SOMClassMgrClassData (som.6)
+ 0000:00000000  Imp  SOMClassMgrObject    (som.7)
+ 0000:00000000  Imp  somConstructClass    (som.28)
+ 0000:00000000  Imp  somDataResolve       (som.47)
+ 0000:00000000  Imp  somEnvironmentNew    (som.30)
+ 0000:00000000  Imp  SOMError             (som.9)
+ 0000:00000000  Imp  SOMFree              (som.10)
+ 0000:00000000  Imp  somIdFromString      (som.31)
+ 0001:00002A38       SOMInitModule
+ 0000:00000000  Imp  SOMObjectCClassData  (som.13)
+ 0000:00000000  Imp  SOMObjectClassData   (som.14)
+ 0000:00000000  Imp  somParentResolve     (som.33)
+ 0000:00000000  Imp  somPrintf            (som.35)
+ 0000:00000000  Imp  somResolve           (som.37)
+ 0001:000029E8       SOMUninitModule
+ 0000:00000000  Imp  SOM_TraceLevel       (som.18)
+ 0002:000009C8       stderr
+ 0002:000009C0       stdin
+ 0002:000009C4       stdout
+ 0001:00006E30       strcspn
+ 0001:0000DFFC       strnicmp
+ 0001:0000B9C0       strspn
+ 0001:0000C7C0       strtod
+ 0001:0000D44C       strtol
+ 0001:0000CD3C       strtold
+ 0001:0000D57C       strtoul
+ 0001:00006CB0       strupr
+ 0001:000061DC       VRAddStandardMap
+ 0001:00006220       VRAddToMessageMap
+ 0002:00000030       VRIconButtonCClassData
+ 0002:00000000       VRIconButtonClassData
+ 0001:00000ADC       VRIconButtonClass_somInit
+ 0001:00000A8C       VRIconButtonClass_somUninit
+ 0001:00001C00       VRIconButtonClass_vrLocalClassInit
+ 0001:00001BAC       VRIconButtonClass_vrLocalWindowClassInit
+ 0001:00000CA8       VRIconButtonInstance_somInit
+ 0001:00000C00       VRIconButtonInstance_somUninit
+ 0001:00000000       VRIconButtonInstance_vrGet_Autosize
+ 0001:000008C4       VRIconButtonInstance_vrGet_Caption
+ 0001:000006FC       VRIconButtonInstance_vrGet_PicturePath
+ 0001:00000254       VRIconButtonInstance_vrGet_Pushed
+ 0001:000005A4       VRIconButtonInstance_vrGet_ResizePicture
+ 0001:00000338       VRIconButtonInstance_vrGet_TextPosition
+ 0001:00000B60       VRIconButtonInstance_vrLocalCreateWindow
+ 0001:00000058       VRIconButtonInstance_vrSet_Autosize
+ 0001:0000097C       VRIconButtonInstance_vrSet_Caption
+ 0001:000007B4       VRIconButtonInstance_vrSet_PicturePath
+ 0001:000002AC       VRIconButtonInstance_vrSet_Pushed
+ 0001:000005FC       VRIconButtonInstance_vrSet_ResizePicture
+ 0001:00000438       VRIconButtonInstance_vrSet_TextPosition
+ 0001:00000698       VRIconButtonInstance_vrWM_CONTROL
+ 0001:000000C0       VRIconButtonInstance_vrWM_MATCHMNEMONIC
+ 0001:00000180       VRIconButtonInstance_vrWM_PAINT
+ 0002:00000044       VRIconButtonMessageMap
+ 0002:0000067C       VRIconButtonMethodList
+ 0001:00001FB0       VRIconButtonNewClass
+ 0002:00000684       VRIconButtonPicturePath
+ 0002:000004DC       VRIconButtonPropertyList
+ 0001:00002750       VRIconButton_WM_stub
+ 0001:00006268       VRInheritMessageMap
+ 0001:00005848       VRInstallHelp
+ 0001:0000642C       VRLoadProc
+ 0001:000062B4       VRMapObjectToWindow
+ 0001:0000630C       VRMapWindowToObject
+ 0001:000063E8       VRMemAlloc
+ 0001:000063A4       VRMemFree
+ 0001:00006194       VRNotebookNewClass
+ 0002:000008A4       VRParentLoadFunction
+ 0002:00002BB0       VRParentModule
+ 0002:000008A0       VRParentName
+ 0001:000057F4       VRPictDisplay
+ 0001:00005794       VRPictLoad
+ 0001:00005760       VRPictUnload
+ 0001:00006104       VRPushButtonNewClass
+ 0001:00006364       VRQueryAnchorBlock
+ 0001:0000649C       VRQueryRunMode
+ 0001:00005F84       VRRXStringToSOMObject
+ 0002:000006AC       VRTabbedDialogCClassData
+ 0002:00000690       VRTabbedDialogClassData
+ 0001:00003100       VRTabbedDialogClass_somInit
+ 0001:000030B0       VRTabbedDialogClass_somUninit
+ 0001:00003310       VRTabbedDialogClass_vrLocalClassInit
+ 0001:000032C0       VRTabbedDialogClass_vrLocalWindowClassInit
+ 0001:00002D30       VRTabbedDialogClass_vrShowHelp
+ 0001:00003274       VRTabbedDialogInstance_somInit
+ 0001:00003228       VRTabbedDialogInstance_somUninit
+ 0001:00002D60       VRTabbedDialogInstance_vrGet_TabDirection
+ 0001:00002F20       VRTabbedDialogInstance_vrGet_TabPosition
+ 0001:00003184       VRTabbedDialogInstance_vrLocalCreateWindow
+ 0001:00002E28       VRTabbedDialogInstance_vrSet_TabDirection
+ 0001:00002FE4       VRTabbedDialogInstance_vrSet_TabPosition
+ 0001:00002CA4       VRTabbedDialogInstance_vrWM_BUTTON1DOWN
+ 0001:00002AEC       VRTabbedDialogInstance_vrWM_CHAR
+ 0001:00002BA8       VRTabbedDialogInstance_vrWM_COMMAND
+ 0001:00002C44       VRTabbedDialogInstance_vrWM_CONTEXTMENU
+ 0002:000006C4       VRTabbedDialogMessageMap
+ 0002:000004D8       VRTabbedDialogMethodList
+ 0001:00003788       VRTabbedDialogNewClass
+ 0002:00000680       VRTabbedDialogPicturePath
+ 0002:000002D0       VRTabbedDialogPropertyList
+ 0001:00003DEC       VRTabbedDialog_WM_stub
+ 0001:00005E3C       VRVersion
+ 0001:00004A98       VRXColorDialog
+ 0001:00004AA0       VRXColourDialog
+ 0001:00004668       VRXDirectoryDialog
+ 0001:00005540       VRXDropFuncs
+ 0001:00005054       VRXGetClipboardText
+ 0001:000056B4       VRXLoadFuncs
+ 0001:00005240       VRXPutClipboardText
+ 0001:000054EC       VRXVersion
+ 0001:0000C4F8       wcstombs
+ 0001:0000C67C       wctomb
+ 0000:00000000  Imp  WinBeginPaint        (PMWIN.703)
+ 0000:00000000  Imp  WinCloseClipbrd      (PMWIN.707)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  WinDefDlgProc        (PMWIN.910)
+ 0000:00000000  Imp  WinDefFileDlgProc    (PMCTLS.5)
+ 0000:00000000  Imp  WinDeleteLibrary     (PMWIN.722)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  WinDestroyWindow     (PMWIN.728)
+ 0000:00000000  Imp  WinDismissDlg        (PMWIN.729)
+ 0000:00000000  Imp  WinDrawText          (PMWIN.913)
+ 0000:00000000  Imp  WinEmptyClipbrd      (PMWIN.733)
+ 0000:00000000  Imp  WinEnableWindow      (PMWIN.735)
+ 0000:00000000  Imp  WinEndPaint          (PMWIN.738)
+ 0000:00000000  Imp  WinFileDlg           (PMCTLS.4)
+ 0000:00000000  Imp  WinFillRect          (PMWIN.743)
+ 0000:00000000  Imp  WinGetLastError      (PMWIN.753)
+ 0000:00000000  Imp  WinGetPS             (PMWIN.757)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  WinInvalidateRect    (PMWIN.765)
+ 0000:00000000  Imp  WinIsChild           (PMWIN.768)
+ 0000:00000000  Imp  WinLoadDlg           (PMWIN.924)
+ 0000:00000000  Imp  WinLoadLibrary       (PMWIN.777)
+ 0000:00000000  Imp  WinMessageBox        (PMWIN.789)
+ 0000:00000000  Imp  WinOpenClipbrd       (PMWIN.793)
+ 0000:00000000  Imp  WinPostMsg           (PMWIN.919)
+ 0000:00000000  Imp  WinProcessDlg        (PMWIN.796)
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  WinQueryClipbrdData  (PMWIN.806)
+ 0000:00000000  Imp  WinQueryFocus        (PMWIN.817)
+ 0000:00000000  Imp  WinQueryPresParam    (PMWIN.939)
+ 0000:00000000  Imp  WinQueryQueueInfo    (PMWIN.824)
+ 0000:00000000  Imp  WinQuerySysValue     (PMWIN.829)
+ 0000:00000000  Imp  WinQueryWindow       (PMWIN.834)
+ 0000:00000000  Imp  WinQueryWindowPos    (PMWIN.837)
+ 0000:00000000  Imp  WinQueryWindowProcess (PMWIN.838)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  WinQueryWindowULong  (PMWIN.843)
+ 0000:00000000  Imp  WinReleasePS         (PMWIN.848)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  WinSetClipbrdData    (PMWIN.854)
+ 0000:00000000  Imp  WinSetDlgItemText    (PMWIN.859)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0000:00000000  Imp  WinSetWindowText     (PMWIN.877)
+ 0000:00000000  Imp  WinSetWindowULong    (PMWIN.878)
+ 0000:00000000  Imp  WinSubclassWindow    (PMWIN.929)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0001:000055D0       WriteErrorCode
+ 0001:00003F08       WriteStemElement
+ 0001:0000E36C       _asciitld
+ 0001:0000E450       _asciitod
+ 0001:0000C7F0       _atofieee
+ 0001:0000D268       _atold
+ 0001:0000BCB4       _beginthread
+ 0001:00006F2C       _bit_test_set
+ 0001:0000D28C       _bufprint
+ 0001:00006C5C       _callback_opt_sys
+ 0001:00006ED8       _CloseSem
+ 0001:0000D870       _convert
+ 0001:00006E6C       _CreateSem
+ 0001:00007CA0       _critlib_except
+ 0001:0000B9FC       _CrtGetLocalData
+ 0001:0000BC70       _CrtInitThread
+ 0001:000066B8       _CRT_init
+ 0002:00000E50       _crt_msg_handle
+ 0001:00006A48       _CRT_term
+ 0002:000008B0       _ctable
+ 0002:00002B04       _ctype
+ 0002:000009B4       _ctypeModule
+ 0002:000009D0       _daylight
+ 0002:00002140       _DBL_MAX
+ 0002:00002138       _DBL_MIN
+ 0002:00000C80       _dllentry
+ 0001:0000292C       _DLL_InitTerm
+ 0002:00002178       _dneginfi
+ 0002:00002168       _dnegqnan
+ 0002:00002170       _dnegsnan
+ 0002:00002160       _dposinfi
+ 0002:00002150       _dposqnan
+ 0002:00002158       _dpossnan
+ 0002:00002AF4       _edata
+ 0001:0000D3C8       _edcGetMessage
+ 0002:00002BF8       _edcinit_fin
+ 0002:00002BB8       _eh_base
+ 0002:00002C94       _end
+ 0001:0000D6A4       _endthread
+ 0002:00002AF4       _environ
+ 0001:0000BEA0       _errno
+ 0001:00006C38       _Exception
+ 0001:00007B9C       _exception_dllinit
+ 0001:00007BCC       _exception_procinit
+ 0001:000073F8       _EXE_Exception
+ 0001:00006F4C       _fcloseall_weak
+ 0001:0000DA90       _fillb
+ 0002:000027F0       _firsteib
+ 0001:0000BEE0       _Flush
+ 0001:0000DCD8       _flushb
+ 0002:00002194       _fneginfi
+ 0002:0000218C       _fnegqnan
+ 0002:00002190       _fnegsnan
+ 0002:00002188       _fposinfi
+ 0002:00002180       _fposqnan
+ 0002:00002184       _fpossnan
+ 0001:0000E5F8       _fpreset
+ 0001:00006554       _freeCtype
+ 0001:00006F48       _freeCtype_weak
+ 0001:000070B8       _FreeFCB
+ 0001:00006F40       _freeLocale_weak
+ 0001:000071C0       _freeThreadStorage
+ 0001:0000C0A0       _getcx
+ 0001:00007C08       _get_eib
+ 0001:00006C74       _get_seglim
+ 0002:00002AFC       _have_freed
+ 0001:0000B290       _heapmin
+ 0001:0000AFA8       _heapmin_int
+ 0002:00002148       _HUGE_VAL
+ 0001:0000D3F0       _ilog2
+ 0002:00002130       _infinity
+ 0001:00006570       _init_ctype
+ 0001:00006F44       _init_ctype_weak
+ 0001:0000E9A4       _input_excpt
+ 0001:0000D3F8       _internal_err
+ 0002:00002AF0       _lasteib
+ 0002:000021A2       _LDBL_MAX
+ 0002:00002198       _LDBL_MIN
+ 0002:000021E8       _ldneginfi
+ 0002:000021D4       _ldnegqnan
+ 0002:000021DE       _ldnegsnan
+ 0002:000021CA       _ldposinfi
+ 0002:000021B6       _ldposqnan
+ 0002:000021C0       _ldpossnan
+ 0002:000021AC       _LHUGE_VAL
+ 0001:000075B0       _Lib_excpt
+ 0002:00002BFC       _locale_initialized
+ 0001:0000E608       _ltoa
+ 0001:0000C258       _matherr
+ 0002:00000CB0       _matherr_ptr
+ 0001:0000BECC       _Math_Exception_Def
+ 0002:00002B08       _memory_sem
+ 0001:0000B7BC       _MesgServ
+ 0001:00007C64       _mig_eib_store
+ 0002:00002B00       _osmajor
+ 0002:00002B34       _osminor
+ 0002:000009D8       _osmode
+ 0002:00002B58       _pBucketArr
+ 0002:000009CC       _PGLOBAL_PTR
+ 0002:00002250       _pospow1
+ 0002:000024D0       _pospow2
+ 0001:0000B768       _PrintErrMsg
+ 0001:00006D04       _printfieee
+ 0001:00006D48       _printf_ansi
+ 0001:0000E0A8       _readbSync
+ 0001:00007444       _recreate_exception
+ 0001:00006C68       _Regen_exception
+ 0001:0000BDB8       _ReleaseSem
+ 0001:0000BD28       _RequestSem
+ 0001:00007DFC       _setupenv
+ 0001:0000D38C       _set_crt_msg_handle
+ 0001:0000B344       _split_chunk
+ 0001:00006D7C       _sprintfieee
+ 0001:00006DB8       _sprintf_ansi
+ 0001:00006DE4       _sscanfieee
+ 0001:00006E04       _sscanf_ansi
+ 0001:0000C790       _strtodieee
+ 0001:0000E6AC       _terminate
+ 0002:00002B4C       _TerminateAndDumpSem
+ 0001:00006C50       _Test_and_reset
+ 0001:00006660       _test_handle
+ 0001:0000D6A0       _tfree_weak
+ 0002:000009D4       _timezone
+ 0002:00002BC8       _tmemory_sem
+ 0001:0000E6CC       _toint
+ 0002:00002BF0       _tzname
+ 0001:0000C440       _ungetc
+ 0001:0000E328       _uwrite
+ 0001:000029B0       _VROBJEX_VERSION_INFO_
+ 0001:00002A90       _VXREXX_CALLER_
+ 0001:0000C758       _wcputs
+ 0001:0000D3EC       _Weak_FreeListEntry
+ 0001:0000E8BC       _wfgetposMem
+ 0001:0000D678       _wfloatfmt
+ 0001:0000E8AC       _wfsetposMem
+ 0001:0000C774       _wgetche
+ 0001:0000E8EC       _wOpenMemory
+ 0001:0000E8A8       _wreadbSyncMem
+ 0001:0000E8E8       _wRemoveMem
+ 0001:0000E8D0       _wrewindMem
+ 0001:0000E8B4       _wSeekMem
+ 0001:0000E8D4       _wtellMem
+ 0001:0000C76C       _wungetch
+ 0001:0000E8A4       _wuwriteMem
+ 0001:0000C788       _w_raise
+ 0001:0000C3B8       _w_Terminate_and_dump
+ 0001:0000E8F4       _XDosRead
+ 0001:00007C84       __Async_exception_flag
+ 0001:0000BE50       __broken_time_ptr
+ 0002:000009E0       __char_set_type
+ 0001:0000BEB0       __cppstore
+ 0001:0000BE40       __cvt_buf_ptr
+ 0002:00002C60       __c_local_ctype
+ 0002:000009DC       __decimal_point
+ 0001:000029A8       __dll_initialize
+ 0001:000029A0       __dll_terminate
+ 0001:00008444       __dofmto
+ 0001:0000BE90       __doserrno
+ 0001:0000BE80       __dttm_ptr
+ 0001:000076FC       __Exception
+ 0001:0000BE60       __flags
+ 0001:00008F08       __free
+ 0001:0000AC08       __goscan
+ 0001:0000BE20       __internal_buf_ptr
+ 0001:0000BE30       __lcvt_buf_ptr
+ 0001:0000B43C       __malloc
+ 0001:0000BE10       __perror_msg_ptr
+ 0001:0000BDD4       __random_seed
+ 0001:00007C74       __Saved_return_address
+ 0001:0000BE70       __strerror_msg_ptr
+ 0001:0000BDF0       __strtok_pos
+ 0001:0000BE00       __tempname_ptr
+ 0001:0000D844       __threadid
+ 0001:0000BDE4       __version
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  DOS32TRUEGETMESSAGE  (MSG.6)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  WinQueryWindowPos    (PMWIN.837)
+ 0000:00000000  Imp  somDataResolve       (som.47)
+ 0000:00000000  Imp  WinGetPS             (PMWIN.757)
+ 0000:00000000  Imp  WinQueryFocus        (PMWIN.817)
+ 0000:00000000  Imp  DosRead              (DOSCALLS.281)
+ 0000:00000000  Imp  GpiSetColor          (PMGPI.517)
+ 0000:00000000  Imp  WinEmptyClipbrd      (PMWIN.733)
+ 0000:00000000  Imp  DosRaiseException    (DOSCALLS.356)
+ 0000:00000000  Imp  GpiBox               (PMGPI.356)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  somParentResolve     (som.33)
+ 0000:00000000  Imp  SOMClassMgrClassData (som.6)
+ 0000:00000000  Imp  GpiLine              (PMGPI.398)
+ 0000:00000000  Imp  DosUnwindException   (DOSCALLS.357)
+ 0000:00000000  Imp  DOSREQUESTMUTEXSEM   (DOSCALLS.334)
+ 0000:00000000  Imp  WinOpenClipbrd       (PMWIN.793)
+ 0000:00000000  Imp  WinQueryWindowProcess (PMWIN.838)
+ 0000:00000000  Imp  RexxVariablePool     (REXX.2)
+ 0000:00000000  Imp  somPrintf            (som.35)
+ 0000:00000000  Imp  SOMError             (som.9)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  WinQueryWindowULong  (PMWIN.843)
+ 0000:00000000  Imp  GpiQueryTextBox      (PMGPI.489)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  DosSetFilePtr        (DOSCALLS.256)
+ 0000:00000000  Imp  WinDefFileDlgProc    (PMCTLS.5)
+ 0000:00000000  Imp  WinFillRect          (PMWIN.743)
+ 0000:00000000  Imp  DosCreateMutexSem    (DOSCALLS.331)
+ 0000:00000000  Imp  WinQuerySysValue     (PMWIN.829)
+ 0000:00000000  Imp  somEnvironmentNew    (som.30)
+ 0000:00000000  Imp  WinIsChild           (PMWIN.768)
+ 0000:00000000  Imp  SOMFree              (som.10)
+ 0000:00000000  Imp  DosFreeMem           (DOSCALLS.304)
+ 0000:00000000  Imp  WinDestroyWindow     (PMWIN.728)
+ 0000:00000000  Imp  WinPostMsg           (PMWIN.919)
+ 0000:00000000  Imp  WinFileDlg           (PMCTLS.4)
+ 0000:00000000  Imp  SOM_TraceLevel       (som.18)
+ 0000:00000000  Imp  DosAllocSharedMem    (DOSCALLS.300)
+ 0000:00000000  Imp  SOMObjectCClassData  (som.13)
+ 0000:00000000  Imp  DosAllocMem          (DOSCALLS.299)
+ 0000:00000000  Imp  DosGetInfoBlocks     (DOSCALLS.312)
+ 0000:00000000  Imp  somIdFromString      (som.31)
+ 0000:00000000  Imp  WinReleasePS         (PMWIN.848)
+ 0000:00000000  Imp  DosQueryHType        (DOSCALLS.224)
+ 0000:00000000  Imp  GpiQueryFontMetrics  (PMGPI.453)
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0000:00000000  Imp  DosCloseEventSem     (DOSCALLS.326)
+ 0000:00000000  Imp  GpiCreateLogColorTable (PMGPI.592)
+ 0000:00000000  Imp  WinDefDlgProc        (PMWIN.910)
+ 0000:00000000  Imp  WinSubclassWindow    (PMWIN.929)
+ 0000:00000000  Imp  DosQueryModuleHandle (DOSCALLS.319)
+ 0000:00000000  Imp  DOSPOSTEVENTSEM      (DOSCALLS.328)
+ 0000:00000000  Imp  WinDismissDlg        (PMWIN.729)
+ 0000:00000000  Imp  WinDeleteLibrary     (PMWIN.722)
+ 0000:00000000  Imp  SOMObjectClassData   (som.14)
+ 0000:00000000  Imp  DosCreateEventSem    (DOSCALLS.324)
+ 0000:00000000  Imp  WinBeginPaint        (PMWIN.703)
+ 0000:00000000  Imp  RexxRegisterFunctionDll (REXXAPI.17)
+ 0000:00000000  Imp  DosCloseMutexSem     (DOSCALLS.333)
+ 0000:00000000  Imp  WinSetDlgItemText    (PMWIN.859)
+ 0000:00000000  Imp  DOSRELEASEMUTEXSEM   (DOSCALLS.335)
+ 0000:00000000  Imp  WinGetLastError      (PMWIN.753)
+ 0000:00000000  Imp  DosWrite             (DOSCALLS.282)
+ 0000:00000000  Imp  WinQueryWindow       (PMWIN.834)
+ 0000:00000000  Imp  GpiMove              (PMGPI.404)
+ 0000:00000000  Imp  DOSWAITEVENTSEM      (DOSCALLS.329)
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  DosSetExceptionHandler (DOSCALLS.354)
+ 0000:00000000  Imp  DosQueryProcAddr     (DOSCALLS.321)
+ 0000:00000000  Imp  WinSetWindowULong    (PMWIN.878)
+ 0000:00000000  Imp  WinLoadLibrary       (PMWIN.777)
+ 0000:00000000  Imp  SOMClassClassData    (som.3)
+ 0000:00000000  Imp  WinEnableWindow      (PMWIN.735)
+ 0000:00000000  Imp  WinEndPaint          (PMWIN.738)
+ 0000:00000000  Imp  DOSRESETEVENTSEM     (DOSCALLS.327)
+ 0000:00000000  Imp  WinInvalidateRect    (PMWIN.765)
+ 0000:00000000  Imp  WinQueryClipbrdData  (PMWIN.806)
+ 0000:00000000  Imp  DOS32IQUERYMESSAGECP (MSG.8)
+ 0000:00000000  Imp  DosQueryDBCSEnv      (NLS.6)
+ 0000:00000000  Imp  WinCloseClipbrd      (PMWIN.707)
+ 0000:00000000  Imp  WinProcessDlg        (PMWIN.796)
+ 0000:00000000  Imp  WinDrawText          (PMWIN.913)
+ 0000:00000000  Imp  WinMessageBox        (PMWIN.789)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  RexxQueryFunction    (REXXAPI.20)
+ 0000:00000000  Imp  DosQuerySysInfo      (DOSCALLS.348)
+ 0000:00000000  Imp  WinSetClipbrdData    (PMWIN.854)
+ 0000:00000000  Imp  WinQueryPresParam    (PMWIN.939)
+ 0000:00000000  Imp  SOMClassMgrObject    (som.7)
+ 0000:00000000  Imp  DosUnsetExceptionHandler (DOSCALLS.355)
+ 0000:00000000  Imp  WinSetWindowText     (PMWIN.877)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  GpiQueryRGBColor     (PMGPI.479)
+ 0000:00000000  Imp  somConstructClass    (som.28)
+ 0000:00000000  Imp  DosCreateThread      (DOSCALLS.311)
+ 0000:00000000  Imp  WinQueryQueueInfo    (PMWIN.824)
+ 0000:00000000  Imp  RexxDeregisterFunction (REXXAPI.19)
+ 0000:00000000  Imp  WinLoadDlg           (PMWIN.924)
+ 0000:00000000  Imp  DosSetSignalExceptionFocus (DOSCALLS.378)
+ 0000:00000000  Imp  somResolve           (som.37)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0001:00000000       VRIconButtonInstance_vrGet_Autosize
+ 0001:00000058       VRIconButtonInstance_vrSet_Autosize
+ 0001:000000C0       VRIconButtonInstance_vrWM_MATCHMNEMONIC
+ 0001:00000180       VRIconButtonInstance_vrWM_PAINT
+ 0001:00000254       VRIconButtonInstance_vrGet_Pushed
+ 0001:000002AC       VRIconButtonInstance_vrSet_Pushed
+ 0001:00000338       VRIconButtonInstance_vrGet_TextPosition
+ 0001:00000438       VRIconButtonInstance_vrSet_TextPosition
+ 0001:000005A4       VRIconButtonInstance_vrGet_ResizePicture
+ 0001:000005FC       VRIconButtonInstance_vrSet_ResizePicture
+ 0001:00000698       VRIconButtonInstance_vrWM_CONTROL
+ 0001:000006FC       VRIconButtonInstance_vrGet_PicturePath
+ 0001:000007B4       VRIconButtonInstance_vrSet_PicturePath
+ 0001:000008C4       VRIconButtonInstance_vrGet_Caption
+ 0001:0000097C       VRIconButtonInstance_vrSet_Caption
+ 0001:00000A8C       VRIconButtonClass_somUninit
+ 0001:00000ADC       VRIconButtonClass_somInit
+ 0001:00000B60       VRIconButtonInstance_vrLocalCreateWindow
+ 0001:00000C00       VRIconButtonInstance_somUninit
+ 0001:00000CA8       VRIconButtonInstance_somInit
+ 0001:00000D48       PaintButton
+ 0001:00001830       SetAutoSize
+ 0001:00001A84       FindMnemonic
+ 0001:00001B34       LoadPicture
+ 0001:00001BAC       VRIconButtonClass_vrLocalWindowClassInit
+ 0001:00001C00       VRIconButtonClass_vrLocalClassInit
+ 0001:00001E9C       M_VRIconButtonNewClass
+ 0001:00001FB0       VRIconButtonNewClass
+ 0001:00002750       VRIconButton_WM_stub
+ 0001:0000292C       _DLL_InitTerm
+ 0001:000029A0       __dll_terminate
+ 0001:000029A8       __dll_initialize
+ 0001:000029B0       _VROBJEX_VERSION_INFO_
+ 0001:000029E8       SOMUninitModule
+ 0001:00002A38       SOMInitModule
+ 0001:00002A90       _VXREXX_CALLER_
+ 0001:00002AEC       VRTabbedDialogInstance_vrWM_CHAR
+ 0001:00002BA8       VRTabbedDialogInstance_vrWM_COMMAND
+ 0001:00002C44       VRTabbedDialogInstance_vrWM_CONTEXTMENU
+ 0001:00002CA4       VRTabbedDialogInstance_vrWM_BUTTON1DOWN
+ 0001:00002D30       VRTabbedDialogClass_vrShowHelp
+ 0001:00002D60       VRTabbedDialogInstance_vrGet_TabDirection
+ 0001:00002E28       VRTabbedDialogInstance_vrSet_TabDirection
+ 0001:00002F20       VRTabbedDialogInstance_vrGet_TabPosition
+ 0001:00002FE4       VRTabbedDialogInstance_vrSet_TabPosition
+ 0001:000030B0       VRTabbedDialogClass_somUninit
+ 0001:00003100       VRTabbedDialogClass_somInit
+ 0001:00003184       VRTabbedDialogInstance_vrLocalCreateWindow
+ 0001:00003228       VRTabbedDialogInstance_somUninit
+ 0001:00003274       VRTabbedDialogInstance_somInit
+ 0001:000032C0       VRTabbedDialogClass_vrLocalWindowClassInit
+ 0001:00003310       VRTabbedDialogClass_vrLocalClassInit
+ 0001:00003674       M_VRTabbedDialogNewClass
+ 0001:00003788       VRTabbedDialogNewClass
+ 0001:00003DEC       VRTabbedDialog_WM_stub
+ 0001:00003F08       WriteStemElement
+ 0001:00003FFC       DirDlgProc
+ 0001:000041C4       ClrDlgProc
+ 0001:00004668       VRXDirectoryDialog
+ 0001:00004A98       VRXColorDialog
+ 0001:00004AA0       VRXColourDialog
+ 0001:00004FBC       SaveResultString
+ 0001:00005054       VRXGetClipboardText
+ 0001:00005240       VRXPutClipboardText
+ 0001:000054EC       VRXVersion
+ 0001:00005540       VRXDropFuncs
+ 0001:000055D0       WriteErrorCode
+ 0001:000056B4       VRXLoadFuncs
+ 0001:00005760       VRPictUnload
+ 0001:00005794       VRPictLoad
+ 0001:000057F4       VRPictDisplay
+ 0001:00005848       VRInstallHelp
+ 0001:00005E3C       VRVersion
+ 0001:00005EF4       get_M_VRManagerClassData
+ 0001:00005F18       get_M_VRPrimitiveClassData
+ 0001:00005F3C       get_VRManagerClassData
+ 0001:00005F60       get_VRPrimitiveClassData
+ 0001:00005F84       VRRXStringToSOMObject
+ 0001:00005FE4       get_M_VRWindowClassData
+ 0001:00006008       get_M_VRVisibleClassData
+ 0001:0000602C       get_M_VRCoreClassData
+ 0001:00006050       get_VRWindowClassData
+ 0001:00006074       get_VRVisibleClassData
+ 0001:00006098       get_VRCoreClassData
+ 0001:000060BC       M_VRPushButtonNewClass
+ 0001:00006104       VRPushButtonNewClass
+ 0001:0000614C       M_VRNotebookNewClass
+ 0001:00006194       VRNotebookNewClass
+ 0001:000061DC       VRAddStandardMap
+ 0001:00006220       VRAddToMessageMap
+ 0001:00006268       VRInheritMessageMap
+ 0001:000062B4       VRMapObjectToWindow
+ 0001:0000630C       VRMapWindowToObject
+ 0001:00006364       VRQueryAnchorBlock
+ 0001:000063A4       VRMemFree
+ 0001:000063E8       VRMemAlloc
+ 0001:0000642C       VRLoadProc
+ 0001:0000649C       VRQueryRunMode
+ 0001:00006554       _freeCtype
+ 0001:00006570       _init_ctype
+ 0001:00006660       _test_handle
+ 0001:000066B8       _CRT_init
+ 0001:00006A48       _CRT_term
+ 0001:00006C38       _Exception
+ 0001:00006C50       _Test_and_reset
+ 0001:00006C5C       _callback_opt_sys
+ 0001:00006C68       _Regen_exception
+ 0001:00006C74       _get_seglim
+ 0001:00006CB0       strupr
+ 0001:00006D04       _printfieee
+ 0001:00006D48       _printf_ansi
+ 0001:00006D7C       _sprintfieee
+ 0001:00006DB8       _sprintf_ansi
+ 0001:00006DE4       _sscanfieee
+ 0001:00006E04       _sscanf_ansi
+ 0001:00006E30       strcspn
+ 0001:00006E6C       _CreateSem
+ 0001:00006ED8       _CloseSem
+ 0001:00006F2C       _bit_test_set
+ 0001:00006F40       _freeLocale_weak
+ 0001:00006F44       _init_ctype_weak
+ 0001:00006F48       _freeCtype_weak
+ 0001:00006F4C       _fcloseall_weak
+ 0001:00006F60       fflush
+ 0001:000070B8       _FreeFCB
+ 0001:000071C0       _freeThreadStorage
+ 0001:00007264       getenv
+ 0001:000073F8       _EXE_Exception
+ 0001:00007444       _recreate_exception
+ 0001:000075B0       _Lib_excpt
+ 0001:000076FC       __Exception
+ 0001:00007B9C       _exception_dllinit
+ 0001:00007BCC       _exception_procinit
+ 0001:00007C08       _get_eib
+ 0001:00007C64       _mig_eib_store
+ 0001:00007C74       __Saved_return_address
+ 0001:00007C84       __Async_exception_flag
+ 0001:00007CA0       _critlib_except
+ 0001:00007DFC       _setupenv
+ 0001:00008444       __dofmto
+ 0001:00008F08       __free
+ 0001:00008FFC       free
+ 0001:0000AC08       __goscan
+ 0001:0000AFA8       _heapmin_int
+ 0001:0000B290       _heapmin
+ 0001:0000B344       _split_chunk
+ 0001:0000B43C       __malloc
+ 0001:0000B6BC       malloc
+ 0001:0000B768       _PrintErrMsg
+ 0001:0000B7BC       _MesgServ
+ 0001:0000B9C0       strspn
+ 0001:0000B9FC       _CrtGetLocalData
+ 0001:0000BC70       _CrtInitThread
+ 0001:0000BCB4       _beginthread
+ 0001:0000BD28       _RequestSem
+ 0001:0000BDB8       _ReleaseSem
+ 0001:0000BDD4       __random_seed
+ 0001:0000BDE4       __version
+ 0001:0000BDF0       __strtok_pos
+ 0001:0000BE00       __tempname_ptr
+ 0001:0000BE10       __perror_msg_ptr
+ 0001:0000BE20       __internal_buf_ptr
+ 0001:0000BE30       __lcvt_buf_ptr
+ 0001:0000BE40       __cvt_buf_ptr
+ 0001:0000BE50       __broken_time_ptr
+ 0001:0000BE60       __flags
+ 0001:0000BE70       __strerror_msg_ptr
+ 0001:0000BE80       __dttm_ptr
+ 0001:0000BE90       __doserrno
+ 0001:0000BEA0       _errno
+ 0001:0000BEB0       __cppstore
+ 0001:0000BECC       _Math_Exception_Def
+ 0001:0000BEE0       _Flush
+ 0001:0000C0A0       _getcx
+ 0001:0000C258       _matherr
+ 0001:0000C26C       mbtowc
+ 0001:0000C3B8       _w_Terminate_and_dump
+ 0001:0000C440       _ungetc
+ 0001:0000C4F8       wcstombs
+ 0001:0000C67C       wctomb
+ 0001:0000C758       _wcputs
+ 0001:0000C76C       _wungetch
+ 0001:0000C774       _wgetche
+ 0001:0000C788       _w_raise
+ 0001:0000C790       _strtodieee
+ 0001:0000C7C0       strtod
+ 0001:0000C7F0       _atofieee
+ 0001:0000CD14       atof
+ 0001:0000CD3C       strtold
+ 0001:0000D268       _atold
+ 0001:0000D28C       _bufprint
+ 0001:0000D38C       _set_crt_msg_handle
+ 0001:0000D3C8       _edcGetMessage
+ 0001:0000D3EC       _Weak_FreeListEntry
+ 0001:0000D3F0       _ilog2
+ 0001:0000D3F8       _internal_err
+ 0001:0000D44C       strtol
+ 0001:0000D57C       strtoul
+ 0001:0000D678       _wfloatfmt
+ 0001:0000D6A0       _tfree_weak
+ 0001:0000D6A4       _endthread
+ 0001:0000D844       __threadid
+ 0001:0000D870       _convert
+ 0001:0000DA90       _fillb
+ 0001:0000DCD8       _flushb
+ 0001:0000DFFC       strnicmp
+ 0001:0000E0A8       _readbSync
+ 0001:0000E328       _uwrite
+ 0001:0000E36C       _asciitld
+ 0001:0000E450       _asciitod
+ 0001:0000E51C       calloc
+ 0001:0000E5F8       _fpreset
+ 0001:0000E608       _ltoa
+ 0001:0000E6AC       _terminate
+ 0001:0000E6CC       _toint
+ 0001:0000E8A4       _wuwriteMem
+ 0001:0000E8A8       _wreadbSyncMem
+ 0001:0000E8AC       _wfsetposMem
+ 0001:0000E8B4       _wSeekMem
+ 0001:0000E8BC       _wfgetposMem
+ 0001:0000E8D0       _wrewindMem
+ 0001:0000E8D4       _wtellMem
+ 0001:0000E8E8       _wRemoveMem
+ 0001:0000E8EC       _wOpenMemory
+ 0001:0000E8F4       _XDosRead
+ 0001:0000E9A4       _input_excpt
+ 0001:0000EA0C       setjmp
+ 0001:0000EA48       longjmp
+ 0001:0000EAAC       sig32
+ 0001:0000EABE       DosGetMessage
+ 0001:0000EABE       DOS32GETMESSAGE
+ 0001:0000EABE       Dos32GetMessage
+ 0001:0000EABE       DOSGETMESSAGE
+ 0002:00000000       VRIconButtonClassData
+ 0002:00000030       VRIconButtonCClassData
+ 0002:00000038       M_VRIconButtonClassData
+ 0002:0000003C       M_VRIconButtonCClassData
+ 0002:00000044       VRIconButtonMessageMap
+ 0002:000002D0       VRTabbedDialogPropertyList
+ 0002:000004D8       VRTabbedDialogMethodList
+ 0002:000004DC       VRIconButtonPropertyList
+ 0002:0000067C       VRIconButtonMethodList
+ 0002:00000680       VRTabbedDialogPicturePath
+ 0002:00000684       VRIconButtonPicturePath
+ 0002:00000690       VRTabbedDialogClassData
+ 0002:000006AC       VRTabbedDialogCClassData
+ 0002:000006B4       M_VRTabbedDialogClassData
+ 0002:000006BC       M_VRTabbedDialogCClassData
+ 0002:000006C4       VRTabbedDialogMessageMap
+ 0002:000008A0       VRParentName
+ 0002:000008A4       VRParentLoadFunction
+ 0002:000008B0       _ctable
+ 0002:000009B4       _ctypeModule
+ 0002:000009C0       stdin
+ 0002:000009C4       stdout
+ 0002:000009C8       stderr
+ 0002:000009CC       _PGLOBAL_PTR
+ 0002:000009D0       _daylight
+ 0002:000009D4       _timezone
+ 0002:000009D8       _osmode
+ 0002:000009DC       __decimal_point
+ 0002:000009E0       __char_set_type
+ 0002:00000C80       _dllentry
+ 0002:00000CB0       _matherr_ptr
+ 0002:00000E50       _crt_msg_handle
+ 0002:00002130       _infinity
+ 0002:00002138       _DBL_MIN
+ 0002:00002140       _DBL_MAX
+ 0002:00002148       _HUGE_VAL
+ 0002:00002150       _dposqnan
+ 0002:00002158       _dpossnan
+ 0002:00002160       _dposinfi
+ 0002:00002168       _dnegqnan
+ 0002:00002170       _dnegsnan
+ 0002:00002178       _dneginfi
+ 0002:00002180       _fposqnan
+ 0002:00002184       _fpossnan
+ 0002:00002188       _fposinfi
+ 0002:0000218C       _fnegqnan
+ 0002:00002190       _fnegsnan
+ 0002:00002194       _fneginfi
+ 0002:00002198       _LDBL_MIN
+ 0002:000021A2       _LDBL_MAX
+ 0002:000021AC       _LHUGE_VAL
+ 0002:000021B6       _ldposqnan
+ 0002:000021C0       _ldpossnan
+ 0002:000021CA       _ldposinfi
+ 0002:000021D4       _ldnegqnan
+ 0002:000021DE       _ldnegsnan
+ 0002:000021E8       _ldneginfi
+ 0002:00002250       _pospow1
+ 0002:000024D0       _pospow2
+ 0002:000027F0       _firsteib
+ 0002:00002AF0       _lasteib
+ 0002:00002AF4       _environ
+ 0002:00002AF4       _edata
+ 0002:00002AF8       @BSSG:\V22\SRC\ODK\LIBC\CONV1.C
+ 0002:00002AFC       _have_freed
+ 0002:00002B00       _osmajor
+ 0002:00002B04       _ctype
+ 0002:00002B08       _memory_sem
+ 0002:00002B14       @BSSG:\build\RT\SRC\ATOF.C
+ 0002:00002B24       @BSSE:\Development\VXODK\Projects\VRObjEx\C\ICOBTN.C
+ 0002:00002B2C       @BSSG:\V22\SRC\ODK\LIBC\MAP.C
+ 0002:00002B34       _osminor
+ 0002:00002B38       @BSSG:\V22\SRC\ODK\LIBC\NOTEBK.C
+ 0002:00002B40       @BSSG:\build\RT\SRC\PRTEMSG.C
+ 0002:00002B44       @BSSG:\V22\SRC\ODK\LIBC\MEM1.C
+ 0002:00002B4C       _TerminateAndDumpSem
+ 0002:00002B58       _pBucketArr
+ 0002:00002B98       @BSSG:\build\RT\SRC\N_EXCEPT.C
+ 0002:00002BA4       @BSSG:\V22\SRC\ODK\LIBC\RUNMODE.C
+ 0002:00002BB0       VRParentModule
+ 0002:00002BB4       DLLModule
+ 0002:00002BB8       _eh_base
+ 0002:00002BBC       @BSSG:\V22\SRC\ODK\LIBC\MAPS.C
+ 0002:00002BC8       _tmemory_sem
+ 0002:00002BD4       @BSSG:\build\RT\SRC\GOSCAN.C
+ 0002:00002BE4       @BSSE:\Development\VXODK\Projects\VRObjEx\C\TABDLG.C
+ 0002:00002BF0       _tzname
+ 0002:00002BF8       _edcinit_fin
+ 0002:00002BFC       _locale_initialized
+ 0002:00002C00       @BSSG:\build\RT\SRC\EDCINIT.C
+ 0002:00002C10       @BSSG:\V22\SRC\ODK\LIBC\HELP1.C
+ 0002:00002C28       @BSSG:\V22\SRC\ODK\LIBC\PICTUTIL.C
+ 0002:00002C34       @BSSG:\V22\SRC\ODK\LIBC\VERS.C
+ 0002:00002C38       @BSSG:\build\RT\SRC\FREE.C
+ 0002:00002C3C       @BSSG:\V22\SRC\ODK\LIBC\ANCHOR.C
+ 0002:00002C40       @BSSG:\build\RT\SRC\ATOLD.C
+ 0002:00002C60       __c_local_ctype
+ 0002:00002C64       @BSSG:\V22\SRC\ODK\LIBC\CLSDAT1.C
+ 0002:00002C7C       @BSSG:\V22\SRC\ODK\LIBC\CLSDAT2.C
+ 0002:00002C8C       @BSSG:\V22\SRC\ODK\LIBC\PBUTTON.C
+ 0002:00002C94       _end
+
+Program entry point at 0001:0000292C

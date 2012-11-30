@@ -1,0 +1,68 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "../h/dlgids.h"
+
+#define FCF_CLOSEBUTTON     0x04000000L
+
+CODEPAGE 850
+
+DLGTEMPLATE ID_CLRDLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", ID_CLRDLG, 40, 26, 210, 178, NOT WS_VISIBLE | NOT
+            WS_SAVEBITS, FCF_SYSMENU | FCF_TITLEBAR | FCF_CLOSEBUTTON |
+            FCF_NOBYTEALIGN
+    BEGIN
+        CONTROL         "", ID_COL, 0, 47, 210, 130, "ColorSelectClass", WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        SPINBUTTON      ID_SPINR, 3,  25, 34, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        SPINBUTTON      ID_SPING, 45, 25, 34, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        SPINBUTTON      ID_SPINB, 87, 25, 33, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        LTEXT           "Red:",   -1, 3,  38, 32, 8, DT_BOTTOM
+        LTEXT           "Green:", -1, 45, 38, 32, 8, DT_BOTTOM | NOT WS_GROUP
+        LTEXT           "Blue:",  -1, 87, 38, 32, 8, DT_BOTTOM | NOT WS_GROUP
+        DEFPUSHBUTTON   "OK", 106, 3, 3, 40, 13
+        PUSHBUTTON      "~Reset", ID_UNDO, 45, 3, 40, 13
+        PUSHBUTTON      "Cancel", DID_CANCEL, 87, 3, 40, 13
+    END
+END
+
+DLGTEMPLATE IDD_DIRDLG
+BEGIN
+    DIALOG  "", IDD_DIRDLG, 6, 4, 160, 176, FS_NOBYTEALIGN, FCF_DLGBORDER | FCF_SYSMENU | FCF_TITLEBAR | FCF_CLOSEBUTTON
+    PRESPARAMS PP_FONTNAMESIZE, "9.WarpSans"
+    BEGIN
+        LTEXT           "Drive:",                           IDD_DRVTEXT, 3,   166, 66,  8,   DT_VCENTER
+        COMBOBOX        "",                                 IDD_DRVLIST, 3,   18,  154, 147, NOT CBS_SIMPLE | CBS_DROPDOWNLIST
+        LTEXT           "Directory:",                       IDD_DIRTEXT, 3,   143, 64,  8,   DT_VCENTER
+        PUSHBUTTON      "~Home",                            IDD_HOMEDIR, 96,  142, 30,  11,  WS_GROUP | NOT WS_VISIBLE
+        PUSHBUTTON      "~New",                             IDD_HOMEDIR, 127, 142, 30,  11,  NOT WS_TABSTOP | NOT WS_VISIBLE
+        ENTRYFIELD      "",                                 IDD_FULLNAME,4,   132, 152, 8,   ES_MARGIN | ES_READONLY
+                        PRESPARAMS PP_BACKGROUNDCOLORINDEX, SYSCLR_DIALOGBACKGROUND
+        LISTBOX                                             IDD_DIRLIST, 3,   18,  153, 111, LS_OWNERDRAW | LS_HORZSCROLL
+        DEFPUSHBUTTON   "OK",                               DID_OK,      3,   2,   40,  13,  WS_GROUP
+        PUSHBUTTON      "Cancel",                           DID_CANCEL,  45,  2,   40,  13,  NOT WS_TABSTOP
+
+        /* Unused controls */
+        LTEXT           "Open filename:",                   257,    0, 0, 0, 0, NOT WS_VISIBLE | DT_VCENTER
+        AUTOCHECKBOX    "Read-Only",                        269,    0, 0, 0, 0, NOT WS_VISIBLE | NOT WS_TABSTOP | WS_GROUP
+        RTEXT           "",                                 270,    0, 0, 0, 0, NOT WS_VISIBLE | NOT WS_GROUP | DT_VCENTER
+        LTEXT           "Show files of type:",              261,    0, 0, 0, 0, NOT WS_VISIBLE | DT_VCENTER
+        COMBOBOX        "",                                 262,    0, 0, 0, 0, NOT WS_VISIBLE | NOT CBS_SIMPLE | CBS_DROPDOWNLIST
+        LTEXT           "File:",                            265,    0, 0, 0, 0, NOT WS_VISIBLE | DT_VCENTER
+        LISTBOX                                             266,    0, 0, 0, 0, NOT WS_VISIBLE | LS_HORZSCROLL
+        PUSHBUTTON      "Help",                             267,    0, 0, 0, 0, NOT WS_VISIBLE | NOT WS_TABSTOP | BS_HELP | BS_NOPOINTERFOCUS
+        PUSHBUTTON      "~Apply",                           268,    0, 0, 0, 0, NOT WS_VISIBLE | NOT WS_TABSTOP
+    END
+END
+
+DLGTEMPLATE IDD_MAKEDIR
+BEGIN
+    DIALOG  "", IDD_MAKEDIR, 1, 1, 156, 32, FS_NOBYTEALIGN, FCF_DLGBORDER | FCF_SYSMENU | FCF_TITLEBAR | FCF_CLOSEBUTTON
+    PRESPARAMS PP_FONTNAMESIZE, "9.WarpSans"
+    BEGIN
+        ENTRYFIELD      "",                                 IDD_DIRNAME, 4,   19,  148, 8,   ES_MARGIN
+        DEFPUSHBUTTON   "OK",                               DID_OK,      3,   2,   40,  13,  WS_GROUP
+        PUSHBUTTON      "Cancel",                           DID_CANCEL,  45,  2,   40,  13,  NOT WS_TABSTOP
+    END
+END
+

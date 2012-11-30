@@ -1,0 +1,164 @@
+#ifndef VRTabbedDialog_PRP_INCLUDED
+#define VRTabbedDialog_PRP_INCLUDED
+
+const VRPROPENTRY VRTabbedDialogPropertyList[] =
+  {
+    {
+      "Binding",  /* name */
+      1,      /* create time */
+      0,      /* read only */
+      1,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Style",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditEnum",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "StatusTextAlignment",  /* name */
+      1,      /* create time */
+      0,      /* read only */
+      1,      /* hidden */
+      1,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Style",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditEnum",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "TabShape",  /* name */
+      1,      /* create time */
+      0,      /* read only */
+      1,      /* hidden */
+      1,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Pages",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditEnum",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "TabTextAlignment",  /* name */
+      1,      /* create time */
+      0,      /* read only */
+      1,      /* hidden */
+      1,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Pages",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditEnum",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "MajorTabPos",  /* name */
+      1,      /* create time */
+      0,      /* read only */
+      1,      /* hidden */
+      1,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Pages",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditEnum",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "BackPages",  /* name */
+      1,      /* create time */
+      0,      /* read only */
+      1,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Style",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditEnum",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "TabPosition",  /* name */
+      1,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Style",  /* edit group */
+      ";Top;Bottom",  /* editHint (enum value) */
+      "VREditEnum",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "TabDirection",  /* name */
+      1,      /* create time */
+      1,      /* read only */
+      0,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Style",  /* edit group */
+      ";LeftToRight;RightToLeft",  /* editHint (enum value) */
+      "VREditEnum",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_CSTRING,
+      1          /* saveable */
+    },
+    {
+      "ContextMenu",  /* name */
+      0,      /* create time */
+      0,      /* read only */
+      1,      /* hidden */
+      0,      /* optimizable */
+      NULL,    /* description */
+      NULL,    /* group */
+      "Event",  /* edit group */
+      "",  /* editHint (enum value) */
+      "VREditEvent",      /* editFunction */
+      NULL,    /* editGroupCaption */
+      VRPROPTYPE_EVENT,
+      1          /* saveable */
+    },
+    {
+      NULL,       /* name */
+      FALSE,      /* create_time */
+      FALSE,      /* read_only */
+      FALSE,      /* hidden */
+      FALSE,      /* optimizable */
+      NULL,       /* description */
+      NULL,       /* group */
+      NULL,       /* edit_group */
+      NULL,       /* edit_hint */
+      NULL,       /* editRtn */
+      NULL,       /* editGroupCaption */
+      0,          /* type */
+      0           /* isSaveable */
+    }
+  };
+
+const VRMETHENTRY VRTabbedDialogMethodList[] =
+  {
+    { NULL }
+  };
+
+#endif
+

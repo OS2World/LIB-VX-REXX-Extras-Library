@@ -1,0 +1,10 @@
+#include "../h/dlgids.h"
+
+
+ICON 1 VROBJEX.ico
+ICON 100 tabdlg.ICO
+ICON 102 icobtn.ICO
+
+RCINCLUDE dialogs.dlg
+
+

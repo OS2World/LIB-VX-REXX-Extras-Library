@@ -1,0 +1,19 @@
+; DEF file for VROBJEX
+library VROBJEX initinstance terminstance
+data multiple readwrite preload nonshared
+code loadoncall
+protmode
+exports
+SOMInitModule
+SOMUninitModule
+_VXREXX_CALLER_
+_VROBJEX_VERSION_INFO_
+VRXColorDialog
+VRXColourDialog
+VRXDirectoryDialog
+VRXDropFuncs
+VRXLoadFuncs
+VRXGetClipboardText
+VRXPutClipboardText
+VRXVersion
+DESCRIPTION '@#Alex Taylor:1.11#@##1## 8 Feb 2012 14:35:50      sigel::::::@@VX-REXX Extras API Library'

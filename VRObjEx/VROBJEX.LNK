@@ -1,0 +1,10 @@
+ICOBTN.obj +
+INITTERM.obj +
+props.obj +
+SOMINIT.obj +
+TABDLG.obj +
+vrxfuncs.obj
+VROBJEX.DLL
+VROBJEX.MAP
+vxrexxc.lib som.lib rexx.lib os2386.lib
+..\VROBJEX.DEF

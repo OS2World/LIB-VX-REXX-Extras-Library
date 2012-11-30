@@ -1,0 +1,4 @@
+    vrSet_PicturePath, vrGet_PicturePath, vrWM_CONTROL, 
+    vrSet_ResizePicture, vrGet_ResizePicture, vrSet_TextPosition, 
+    vrGet_TextPosition, vrSet_Pushed, vrGet_Pushed, 
+    vrWM_PAINT, vrWM_MATCHMNEMONIC;
