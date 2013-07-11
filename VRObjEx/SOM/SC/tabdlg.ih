@@ -35,7 +35,7 @@
 #define SOM_CurrentClass VRTabbedDialogCClassData.parentMtab
 #endif
 
-#define VRTabbedDialog_MaxNoMethods 5
+#define VRTabbedDialog_MaxNoMethods 6
 
 /*
  * Instance data
@@ -115,6 +115,25 @@ static bool   SOMLINK somAP_vrGet_TabDirection(VRTabbedDialog *somSelf,
 	__ap; __id; __desc;           /* Referenced to prevent warning msg */
 
 	return (VRTabbedDialog_vrGet_TabDirection(somSelf,str));
+}
+
+#define VRTabbedDialog_RXMethod_stubD 1
+#pragma linkage(VRTabbedDialog_RXMethod_stub, system)
+SOMEXTERN bool   SOMLINK VRTabbedDialog_RXMethod_stub(VRTabbedDialog *somSelf,
+		somId __id,
+		somId __desc,
+		va_list __ap)
+{
+	LONG argc = va_arg(__ap, LONG);
+	PRXSTRING argv = va_arg(__ap, PRXSTRING);
+	PLONG argsused = va_arg(__ap, PLONG);
+	PRXSTRING retstr = va_arg(__ap, PRXSTRING);
+	PVRMETHEXTRA rxdata = va_arg(__ap, PVRMETHEXTRA);
+	__ap; __id; __desc;           /* Referenced to prevent warning msg */
+
+	return ((somTD_VRTabbedDialog_vrRXMethod_SetFocus) _somFindSMethodOk
+		(SOM_GetClass(somSelf), __id))
+			(somSelf,argc,argv,argsused,retstr,rxdata);
 }
 
 #define VRTabbedDialog_WM_stubD 1
@@ -238,6 +257,24 @@ static somId somId_vrWM_CHAR = &somMN_vrWM_CHAR;
 #define VRTabbedDialogParent_vrWM_CHAR parent_vrWM_CHAR
 
 /*
+ * Overridden method: vrWM_CONTROL
+ */
+#pragma linkage(VRTabbedDialogInstance_vrWM_CONTROL, system)
+SOM_Scope MRESULT   SOMLINK VRTabbedDialogInstance_vrWM_CONTROL(VRTabbedDialog *somSelf,
+		HWND hWnd,
+		ULONG msg,
+		MPARAM mp1,
+		MPARAM mp2);
+#ifndef parent_vrWM_CONTROL
+static char *somMN_vrWM_CONTROL = "vrWM_CONTROL";
+static somId somId_vrWM_CONTROL = &somMN_vrWM_CONTROL;
+#define parent_vrWM_CONTROL(somSelf,hWnd,msg,mp1,mp2) \
+	((SOM_ParentResolveE(VRManager, SOM_CurrentClass, vrWM_CONTROL)) \
+	 (somSelf,hWnd,msg,mp1,mp2))
+#endif
+#define VRTabbedDialogParent_vrWM_CONTROL parent_vrWM_CONTROL
+
+/*
  * Temporary class data structure used only in class creation
  */
 static somClassDataStructure VRTabbedDialogtempClassData;
@@ -325,6 +362,32 @@ static bool   SOMLINK somRD_vrGet_TabDirection(VRTabbedDialog *somSelf,
 }
 
 /*
+ * New Method: vrRXMethod_SetFocus
+ */
+#pragma linkage(VRTabbedDialogInstance_vrRXMethod_SetFocus, system)
+SOM_Scope bool   SOMLINK VRTabbedDialogInstance_vrRXMethod_SetFocus(VRTabbedDialog *somSelf,
+		LONG argc,
+		PRXSTRING argv,
+		PLONG argsused,
+		PRXSTRING retstr,
+		PVRMETHEXTRA rxdata);
+static char *somMN_vrRXMethod_SetFocus = "vrRXMethod_SetFocus";
+static somId somId_vrRXMethod_SetFocus = &somMN_vrRXMethod_SetFocus;
+static char *somDS_vrRXMethod_SetFocus = somMD_VRTabbedDialog_vrRXMethod_SetFocus;
+static somId somDI_vrRXMethod_SetFocus = &somDS_vrRXMethod_SetFocus;
+#pragma linkage(somRD_vrRXMethod_SetFocus, system)
+static bool   SOMLINK somRD_vrRXMethod_SetFocus(VRTabbedDialog *somSelf,
+		LONG argc,
+		PRXSTRING argv,
+		PLONG argsused,
+		PRXSTRING retstr,
+		PVRMETHEXTRA rxdata)
+{
+	return ((bool) va_somDispatchL(somSelf, somId_vrRXMethod_SetFocus,
+		_somGetMethodDescriptor(SOM_GetClass(somSelf),somId_vrRXMethod_SetFocus),argc,argv,argsused,retstr,rxdata));
+}
+
+/*
  * New Method: vrWM_BUTTON1DOWN
  */
 #pragma linkage(VRTabbedDialogInstance_vrWM_BUTTON1DOWN, system)
@@ -380,6 +443,12 @@ static somStaticMethod_t VRTabbedDialogSM[] = {
          (somMethodProc *) VRTabbedDialogInstance_vrGet_TabDirection,
          (somMethodProc *) somRD_vrGet_TabDirection,
          (somMethodProc *) somAP_vrGet_TabDirection    },
+    {    &VRTabbedDialogClassData.vrRXMethod_SetFocus,
+         &somId_vrRXMethod_SetFocus,
+         &somDI_vrRXMethod_SetFocus,
+         (somMethodProc *) VRTabbedDialogInstance_vrRXMethod_SetFocus,
+         (somMethodProc *) somRD_vrRXMethod_SetFocus,
+         (somMethodProc *) VRTabbedDialog_RXMethod_stub    },
     {    &VRTabbedDialogClassData.vrWM_BUTTON1DOWN,
          &somId_vrWM_BUTTON1DOWN,
          &somDI_vrWM_BUTTON1DOWN,
@@ -405,6 +474,8 @@ static somOverrideMethod_t VRTabbedDialogOM[] = {
          (somMethodProc *) VRTabbedDialogInstance_vrWM_COMMAND    },
     {    &somId_vrWM_CHAR,
          (somMethodProc *) VRTabbedDialogInstance_vrWM_CHAR    },
+    {    &somId_vrWM_CONTROL,
+         (somMethodProc *) VRTabbedDialogInstance_vrWM_CONTROL    },
 };
 
 static void VRTabbedDialogsomInitializeClass ()
@@ -416,7 +487,7 @@ static void VRTabbedDialogsomInitializeClass ()
 /*
  * Add the Static Methods.
  */
-	for (smp = VRTabbedDialogSM, i = 0; i < 5; smp++, i++)
+	for (smp = VRTabbedDialogSM, i = 0; i < 6; smp++, i++)
 	    *(smp->classData) =
 	        _somAddStaticMethod (VRTabbedDialogtempClassData.classObject,
 	            *(smp->methodId), *(smp->methodDescriptor),
@@ -427,7 +498,7 @@ static void VRTabbedDialogsomInitializeClass ()
 /*
  * Override methods.
  */
-	for (omp = VRTabbedDialogOM, i = 0; i < 6; omp++, i++)
+	for (omp = VRTabbedDialogOM, i = 0; i < 7; omp++, i++)
 	    _somOverrideSMethod (VRTabbedDialogtempClassData.classObject,
 	        *(omp->methodId), omp->method);
 

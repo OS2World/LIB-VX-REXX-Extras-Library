@@ -16,4 +16,4 @@ VRXLoadFuncs
 VRXGetClipboardText
 VRXPutClipboardText
 VRXVersion
-DESCRIPTION '@#Alex Taylor:1.11#@##1## 8 Feb 2012 14:35:50      sigel::::::@@VX-REXX Extras API Library'
+DESCRIPTION '@#Alex Taylor:1.12#@##1## 12 May 2013 23:57:25     REINFORCE::::::@@VX-REXX Extras API Library'

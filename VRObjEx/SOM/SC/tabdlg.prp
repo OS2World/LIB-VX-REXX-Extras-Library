@@ -157,6 +157,7 @@ const VRPROPENTRY VRTabbedDialogPropertyList[] =
 
 const VRMETHENTRY VRTabbedDialogMethodList[] =
   {
+    { "SetFocus" }, 
     { NULL }
   };
 

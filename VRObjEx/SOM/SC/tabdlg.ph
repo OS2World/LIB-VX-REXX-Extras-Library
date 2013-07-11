@@ -11,6 +11,7 @@ VRMESSAGEMAP VRTabbedDialogMessageMap[] =
     { WM_CONTEXTMENU, NULL, "vrWM_CONTEXTMENU" },
     { WM_COMMAND, NULL, "vrWM_COMMAND" },
     { WM_CHAR, NULL, "vrWM_CHAR" },
+    { WM_CONTROL, NULL, "vrWM_CONTROL" },
     { WM_NULL, NULL, NULL }
   };
 

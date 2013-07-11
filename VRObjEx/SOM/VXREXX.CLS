@@ -1,5 +1,5 @@
 ;
-; Class file 'E:\DEVELOPMENT\VXODK\PROJECTS\VRObjEx\som\vxrexx.cls'
+; Class file 'G:\NETLABS\SVN\VXAPPS\PROJECTS\VROBJEX\som\vxrexx.cls'
 ;
 
 version 210

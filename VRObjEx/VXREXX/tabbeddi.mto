@@ -10,6 +10,7 @@ Methods;List all child objects;ListChildren;ListMeth
 Methods;List methods;ListMethods;ListMeth
 Methods;List properties;ListProperties;ListProp
 Methods;Post an event;PostEvent;PostEvnt
+Methods;Set focus to the object;SetFocus;NoParms
 Methods;Set a page window;SetPageWindow;InsPage
 Methods;Set the status text for a page;SetStatusText;PageText
 Methods;Set the tab text for a page;SetTabText;PageText

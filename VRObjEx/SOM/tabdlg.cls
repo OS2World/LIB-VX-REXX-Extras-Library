@@ -12,12 +12,14 @@ prefix TDL
 <instancedata>
 <endinstancedata>
 <rexxmethods>
+SetFocus
 <endrexxmethods>
 <messages>
 WM_BUTTON1DOWN
 WM_CONTEXTMENU
 WM_COMMAND
 WM_CHAR
+WM_CONTROL
 <endmessages>
 <properties>
 Binding create-time saveable hidden [type=cstring] [editGroup=Style] [editEnumValues=] [editType=enumerated type]

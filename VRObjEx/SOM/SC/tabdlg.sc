@@ -17,7 +17,7 @@ parent class: VRNotebook;
 release order:
     vrSet_TabPosition, vrGet_TabPosition, vrSet_TabDirection, 
     vrGet_TabDirection, vrShowHelp, vrWM_BUTTON1DOWN, 
-    vrWM_CONTEXTMENU;
+    vrWM_CONTEXTMENU, vrRXMethod_SetFocus;
 
 
 passthru: C.h, after;
@@ -51,6 +51,14 @@ methods:
 
     --  VRTabbedDialogInstance_vrGet_TabDirection
 
+    bool    vrRXMethod_SetFocus(LONG argc,
+		PRXSTRING argv,
+		PLONG argsused,
+		PRXSTRING retstr,
+		PVRMETHEXTRA rxdata);
+
+    --  VRTabbedDialogInstance_vrRXMethod_SetFocus
+
     MRESULT    vrWM_BUTTON1DOWN(HWND hWnd,
 		ULONG msg,
 		MPARAM mp1,
@@ -69,6 +77,10 @@ methods:
     override vrWM_CHAR;
 
     --  VRTabbedDialogInstance_vrWM_CHAR
+
+    override vrWM_CONTROL;
+
+    --  VRTabbedDialogInstance_vrWM_CONTROL
 
     override vrLocalClassInit, class;
 

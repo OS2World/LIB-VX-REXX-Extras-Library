@@ -100,6 +100,23 @@ SOM_Scope bool   SOMLINK VRTabbedDialogInstance_vrGet_TabDirection(VRTabbedDialo
 }
 
 /*
+ *  VRTabbedDialogInstance_vrRXMethod_SetFocus
+ */
+
+SOM_Scope bool   SOMLINK VRTabbedDialogInstance_vrRXMethod_SetFocus(VRTabbedDialog *somSelf,
+		LONG argc,
+		PRXSTRING argv,
+		PLONG argsused,
+		PRXSTRING retstr,
+		PVRMETHEXTRA rxdata)
+{
+    /* VRTabbedDialogData *somThis = VRTabbedDialogGetData(somSelf); */
+    VRTabbedDialogMethodDebug("VRTabbedDialog","VRTabbedDialogInstance_vrRXMethod_SetFocus");
+
+    return (bool) 0;
+}
+
+/*
  *  VRTabbedDialogInstance_vrWM_BUTTON1DOWN
  */
 
@@ -161,6 +178,22 @@ SOM_Scope MRESULT   SOMLINK VRTabbedDialogInstance_vrWM_CHAR(VRTabbedDialog *som
     VRTabbedDialogMethodDebug("VRTabbedDialog","VRTabbedDialogInstance_vrWM_CHAR");
 
     return (parent_vrWM_CHAR(somSelf,hWnd,msg,mp1,mp2));
+}
+
+/*
+ *  VRTabbedDialogInstance_vrWM_CONTROL
+ */
+
+SOM_Scope MRESULT   SOMLINK VRTabbedDialogInstance_vrWM_CONTROL(VRTabbedDialog *somSelf,
+		HWND hWnd,
+		ULONG msg,
+		MPARAM mp1,
+		MPARAM mp2)
+{
+    /* VRTabbedDialogData *somThis = VRTabbedDialogGetData(somSelf); */
+    VRTabbedDialogMethodDebug("VRTabbedDialog","VRTabbedDialogInstance_vrWM_CONTROL");
+
+    return (parent_vrWM_CONTROL(somSelf,hWnd,msg,mp1,mp2));
 }
 
 #undef SOM_CurrentClass

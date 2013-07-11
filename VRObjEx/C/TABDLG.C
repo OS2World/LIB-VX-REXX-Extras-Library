@@ -390,3 +390,70 @@ SOM_Scope MRESULT   SOMLINK VRTabbedDialogInstance_vrWM_CHAR(VRTabbedDialog *som
 }
 
 
+
+#undef SOM_CurrentClass
+#define SOM_CurrentClass SOMInstance
+
+/*
+ *  VRTabbedDialogInstance_vrRXMethod_SetFocus
+ */
+
+SOM_Scope bool   SOMLINK VRTabbedDialogInstance_vrRXMethod_SetFocus(VRTabbedDialog *somSelf,
+		LONG argc,
+		PRXSTRING argv,
+		PLONG argsused,
+		PRXSTRING retstr,
+		PVRMETHEXTRA rxdata)
+{
+    HWND hWnd;
+    bool ok = FALSE;
+    ULONG rc;
+
+    /* VRTabbedDialogData *somThis = VRTabbedDialogGetData(somSelf); */
+    VRTabbedDialogMethodDebug("VRTabbedDialog","VRTabbedDialogInstance_vrRXMethod_SetFocus");
+
+    if( argc != 0 ) goto finish;
+
+    ok = TRUE;
+    hWnd = _vrGetWindowHandle( somSelf );
+    rc = WinSetFocus( HWND_DESKTOP, hWnd );
+
+finish:
+    VRBooleanToRXString( retstr, ok );
+    return ( ok );
+}
+
+#undef SOM_CurrentClass
+#define SOM_CurrentClass SOMInstance
+
+/*
+ *  VRTabbedDialogInstance_vrWM_CONTROL
+ */
+
+SOM_Scope MRESULT   SOMLINK VRTabbedDialogInstance_vrWM_CONTROL(VRTabbedDialog *somSelf,
+		HWND hWnd,
+		ULONG msg,
+		MPARAM mp1,
+		MPARAM mp2)
+{
+    /* VRTabbedDialogData *somThis = VRTabbedDialogGetData(somSelf); */
+    VRTabbedDialogMethodDebug("VRTabbedDialog","VRTabbedDialogInstance_vrWM_CONTROL");
+
+    if ( SHORT2FROMMP( mp1 ) == BKN_PAGESELECTED ) {
+        PPAGESELECTNOTIFY pSelect = (PPAGESELECTNOTIFY) mp2;
+        HWND hwndPage = (HWND) WinSendMsg( pSelect->hwndBook,
+                                           BKM_QUERYPAGEWINDOWHWND,
+                                           MPFROMLONG( pSelect->ulPageIdNew ), 0L );
+        /* Make sure the new page dialog gets the input focus unless the notebook
+         * itself has it.
+         */
+        if ( hwndPage && ( hwndPage != BOOKERR_INVALID_PARAMETERS )) {
+            if ( WinQueryFocus( HWND_DESKTOP ) != pSelect->hwndBook )
+                WinSetFocus( HWND_DESKTOP, hwndPage );
+            return (MRESULT) 0;
+        }
+    }
+
+    // Pass all other messages up to the parent
+    return (parent_vrWM_CONTROL(somSelf,hWnd,msg,mp1,mp2));
+}

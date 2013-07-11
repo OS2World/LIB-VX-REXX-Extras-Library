@@ -95,6 +95,12 @@
 	VRVisible_vrWM_CHAR(somSelf,hWnd,msg,mp1,mp2)
 
 /*
+ * Override method: vrWM_CONTROL
+ */
+#define VRTabbedDialog_vrWM_CONTROL(somSelf,hWnd,msg,mp1,mp2) \
+	VRManager_vrWM_CONTROL(somSelf,hWnd,msg,mp1,mp2)
+
+/*
  * New Method: vrSet_TabPosition
  */
 typedef bool    SOMLINK somTP_VRTabbedDialog_vrSet_TabPosition(VRTabbedDialog *somSelf,
@@ -147,6 +153,23 @@ typedef somTP_VRTabbedDialog_vrGet_TabDirection *somTD_VRTabbedDialog_vrGet_TabD
 #define _vrGet_TabDirection VRTabbedDialog_vrGet_TabDirection
 
 /*
+ * New Method: vrRXMethod_SetFocus
+ */
+typedef bool    SOMLINK somTP_VRTabbedDialog_vrRXMethod_SetFocus(VRTabbedDialog *somSelf,
+		LONG argc,
+		PRXSTRING argv,
+		PLONG argsused,
+		PRXSTRING retstr,
+		PVRMETHEXTRA rxdata);
+#pragma linkage(somTP_VRTabbedDialog_vrRXMethod_SetFocus, system)
+typedef somTP_VRTabbedDialog_vrRXMethod_SetFocus *somTD_VRTabbedDialog_vrRXMethod_SetFocus;
+#define somMD_VRTabbedDialog_vrRXMethod_SetFocus "----"
+#define VRTabbedDialog_vrRXMethod_SetFocus(somSelf,argc,argv,argsused,retstr,rxdata) \
+    (SOM_Resolve(somSelf, VRTabbedDialog, vrRXMethod_SetFocus) \
+	(somSelf,argc,argv,argsused,retstr,rxdata))
+#define _vrRXMethod_SetFocus VRTabbedDialog_vrRXMethod_SetFocus
+
+/*
  * New Method: vrWM_BUTTON1DOWN
  */
 typedef MRESULT    SOMLINK somTP_VRTabbedDialog_vrWM_BUTTON1DOWN(VRTabbedDialog *somSelf,
@@ -180,6 +203,7 @@ SOMEXTERN struct VRTabbedDialogClassDataStructure {
 	somMToken vrGet_TabDirection;
 	somMToken vrWM_BUTTON1DOWN;
 	somMToken vrWM_CONTEXTMENU;
+	somMToken vrRXMethod_SetFocus;
 } VRTabbedDialogClassData;
 
 /*

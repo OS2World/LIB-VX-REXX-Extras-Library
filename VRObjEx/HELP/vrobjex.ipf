@@ -738,6 +738,7 @@ differentiate it from the &osq.regular&csq.
 :li.:link reftype=hd  refid='5970' database='A2Z.INF'.ListChildren :elink.
 :li.:link reftype=hd  refid='5340' database='A2Z.INF'.ListMethods :elink.
 :li.:link reftype=hd  refid='5360' database='A2Z.INF'.ListProperties :elink.
+:li.:link reftype=hd  refid='5480' database='A2Z.INF'.SetFocus:elink.
 :li.:link reftype=hd  refid='8520' database='A2Z.INF'.SetPageWindow :elink.
 :li.:link reftype=hd  refid='8600' database='A2Z.INF'.SetStatusText :elink.
 :li.:link reftype=hd  refid='8560' database='A2Z.INF'.SetTabText :elink.
@@ -786,7 +787,11 @@ supported by the standard
 :li.:link reftype=hd  refid='prop_tabdirection'.TabDirection :elink.
 :li.:link reftype=hd  refid='prop_tabposition'.TabPosition :elink.
 :eul.
-:li.In addition, the TabbedDialog object does not support the
+:li.In addition, unlike the standard
+:link reftype=hd refid='1270' database='A2Z.INF'.Notebook:elink., the
+TabbedDialog object supports the
+:link reftype=hd  refid='5480' database='A2Z.INF'.SetFocus:elink. method.
+:li.Finally, the TabbedDialog object does not support the
 :link reftype=hd  refid='4320' database='A2Z.INF'.ContextMenu:elink. event, as
 it defines and handles its own context menu (a list of notebook pages)
 automatically.
@@ -954,7 +959,7 @@ button area (i.e. the
 is 1), then the behaviour of TextPosition is the same as if there is no
 image (see above).  In this case, the text will always be overlayed on the image.
 :li.Otherwise (when there is an image but it is not being rescaled), the text
-will placed on the indicated side of the image.
+will be placed on the indicated side of the image.
 :p.Note that values of 'Right' or 'Left' behave differently in this case, in
 that the text is aligned to the image rather than to the button edge, and
 left-justified.  Values of 'Top' or 'Bottom', on the other hand, behave the same

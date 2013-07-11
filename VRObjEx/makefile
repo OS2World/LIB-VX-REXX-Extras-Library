@@ -3,8 +3,8 @@
 # Don't edit it manually!
 #
 
-ODKDIR   = E:\DEVELOPMENT\VXODK\    
-SOMDIR   = E:\DEVELOPMENT\VXODK\SOM.210\    
+ODKDIR   = E:\Development\VXODK\    
+SOMDIR   = E:\Development\VXODK\SOM.210\    
 dllname  = VROBJEX   
 somlevel = SOM1
 
@@ -16,7 +16,7 @@ objs = \
     $(o)\TABDLG.obj \
     $(o)\vrxfuncs.obj \
 
-!include E:\DEVELOPMENT\VXODK\\bin\makecset.inc
+!include E:\Development\VXODK\\bin\makecset.inc
 
 $(o)\$(dllname).dll : $(objs) $(o)\$(dllname).res $(dllname).lnk $(dllname).def
     makedesc -D"VX-REXX Extras API Library" -N"Alex Taylor" -V"^#define=VERSION_STRING,version.h" $(dllname).def
@@ -28,5 +28,5 @@ $(o)\$(dllname).dll : $(objs) $(o)\$(dllname).res $(dllname).lnk $(dllname).def
 
 $(o)\props.obj : c\props.c  som\sc\icobtn.prp som\sc\tabdlg.prp
 
-$(o)\$(dllname).res : rc\$(dllname).rc  rc\icobtn.ICO rc\tabdlg.ICO rc\VROBJEX.ico
+$(o)\$(dllname).res : rc\$(dllname).rc  rc\icobtn.ico rc\tabdlg.ico rc\vrobjex.ico
 

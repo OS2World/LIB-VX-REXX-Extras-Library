@@ -20,7 +20,7 @@ parent class: VRNotebook;
 release order:
     vrSet_TabPosition, vrGet_TabPosition, vrSet_TabDirection, 
     vrGet_TabDirection, vrShowHelp, vrWM_BUTTON1DOWN, 
-    vrWM_CONTEXTMENU;
+    vrWM_CONTEXTMENU, vrRXMethod_SetFocus;
 
 passthru: C.h, after;
 #ifdef __WATCOMC__
@@ -66,6 +66,13 @@ methods:
     -- VRTabbedDialogInstance_vrGet_TabDirection
 
 #
+# REXX Methods
+#
+
+    bool vrRXMethod_SetFocus( LONG argc, PRXSTRING argv, PLONG argsused, PRXSTRING retstr, PVRMETHEXTRA rxdata ), generate apply = VRTabbedDialog_RXMethod_stub;
+    -- VRTabbedDialogInstance_vrRXMethod_SetFocus
+
+#
 # Message handlers
 #
 
@@ -77,6 +84,8 @@ methods:
     -- VRTabbedDialogInstance_vrWM_COMMAND
     override vrWM_CHAR;
     -- VRTabbedDialogInstance_vrWM_CHAR
+    override vrWM_CONTROL;
+    -- VRTabbedDialogInstance_vrWM_CONTROL
 
 #
 # Class methods
